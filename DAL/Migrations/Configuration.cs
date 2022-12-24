@@ -85,7 +85,7 @@
             // ---------------------------------- Courses -----------------------------------
             
 
-            List<Course> courses = new List<Course>();
+           List<Course> courses = new List<Course>();
             Random random = new Random();
 
             for (int i = 1; i <= 100; i++)

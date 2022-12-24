@@ -32,3 +32,21 @@ E:\dotnet\Facilitating_Farmers\server\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 E:\dotnet\Facilitating_Farmers\server\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\dotnet\Facilitating_Farmers\server\DAL\obj\Debug\DAL.dll
 E:\dotnet\Facilitating_Farmers\server\DAL\obj\Debug\DAL.pdb
+E:\New folder\-net-project\DAL\bin\Debug\DAL.dll.config
+E:\New folder\-net-project\DAL\bin\Debug\DAL.dll
+E:\New folder\-net-project\DAL\bin\Debug\DAL.pdb
+E:\New folder\-net-project\DAL\bin\Debug\EntityFramework.dll
+E:\New folder\-net-project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\New folder\-net-project\DAL\bin\Debug\EntityFramework.xml
+E:\New folder\-net-project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\New folder\-net-project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.AddedDB.resources
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.SeedCourseVideoLock.resources
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.SeedCategory.resources
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.SeedCourses.resources
+E:\New folder\-net-project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\New folder\-net-project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\New folder\-net-project\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\New folder\-net-project\DAL\obj\Debug\DAL.dll
+E:\New folder\-net-project\DAL\obj\Debug\DAL.pdb
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.AddedNewDB.resources

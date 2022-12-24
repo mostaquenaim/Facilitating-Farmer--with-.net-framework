@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace server.Controllers
 {
-    [RoutePrefix("/api")]
+    [RoutePrefix("api")]
     public class DifficultyController : ApiController
     {
         // Get all difficulties
