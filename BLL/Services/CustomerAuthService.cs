@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class AuthService
+    public class CustomerAuthService
     {
-        static AuthService()
+        static CustomerAuthService()
         {
             var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<CustomerDTO, Customer>();
@@ -39,7 +39,7 @@ namespace BLL.Services
             
             var data = mapper.Map<Customer>(user);
 
-            var result= DataAccessFactory.AuthDataAccess().Authenticate(data);
+            var result= DataAccessFactory.CustomerAuthDataAccess().Authenticate(data);
             var token= mapper.Map<CustomerTokenDTO>(result);
             return token;
         }

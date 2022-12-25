@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class SpecialistRepo : Repo, IRepo<Specialist>
+    internal class SpecialistRepo : Repo, IRepo<Specialist>, ISpecAuth
     {
         public Specialist Add(Specialist obj)
         {
@@ -18,6 +18,23 @@ namespace DAL.Repos
 
             return null;
 
+        }
+
+        public SpecialistToken Authenticate(Specialist user)
+        {
+            var u = db.Specialists.FirstOrDefault(en => en.Username.Equals(user.Username) && en.Password.Equals(user.Password));
+            SpecialistToken t = null;
+            if (u != null) //authenticated
+            {
+                string token = Guid.NewGuid().ToString(); // unique random string generate
+                t = new SpecialistToken();
+                t.SpecialistId = u.Id;
+                t.TokenKey = token;
+                t.CreatedAt = DateTime.Now;
+                db.SaveChanges();
+
+            }
+            return t;
         }
 
         public Specialist Delete(int Id)
@@ -39,6 +56,16 @@ namespace DAL.Repos
         public Specialist Get(int Id)
         {
             return db.Specialists.Find(Id);
+        }
+
+        public bool IsAuthenticated(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Logout(string token)
+        {
+            throw new NotImplementedException();
         }
 
         public Specialist Update(Specialist obj)

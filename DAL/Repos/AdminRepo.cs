@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : Repo, IRepo<Admin>
+    internal class AdminRepo : Repo, IRepo<Admin>, IAdminAuth
     {
         public Admin Add(Admin obj)
         {
@@ -17,6 +17,23 @@ namespace DAL.Repos
             if (db.SaveChanges() > 0) return obj;
 
             return null;
+        }
+
+        public AdminToken Authenticate(Admin user)
+        {
+            var u = db.Admins.FirstOrDefault(en => en.Username.Equals(user.Username) && en.Password.Equals(user.Password));
+            AdminToken t = null;
+            if (u != null) //authenticated
+            {
+                string token = Guid.NewGuid().ToString(); // unique random string generate
+                t = new AdminToken();
+                t.AdminId = u.Id;
+                t.TokenKey = token;
+                t.CreatedAt = DateTime.Now;
+                db.SaveChanges();
+
+            }
+            return t;
         }
 
         public Admin Delete(int Id)
@@ -40,6 +57,16 @@ namespace DAL.Repos
         public Admin Get(int Id)
         {
             return db.Admins.Find(Id);
+        }
+
+        public bool IsAuthenticated(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Logout(string token)
+        {
+            throw new NotImplementedException();
         }
 
         public Admin Update(Admin obj)

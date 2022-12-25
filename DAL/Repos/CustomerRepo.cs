@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class CustomerRepo : Repo, IRepo<Customer>,IAuth
+    internal class CustomerRepo : Repo, IRepo<Customer>,ICustAuth
     {
         public Customer Add(Customer obj)
         {

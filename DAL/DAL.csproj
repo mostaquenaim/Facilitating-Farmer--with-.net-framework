@@ -70,8 +70,10 @@
     <Compile Include="EF\Models\Specialist.cs" />
     <Compile Include="EF\Models\CustomerToken.cs" />
     <Compile Include="EF\Models\SpecialistToken.cs" />
-    <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IAdminAuth.cs" />
+    <Compile Include="Interfaces\ICustAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\ISpecAuth.cs" />
     <Compile Include="Migrations\202212101838401_AddedDB.cs" />
     <Compile Include="Migrations\202212101838401_AddedDB.designer.cs">
       <DependentUpon>202212101838401_AddedDB.cs</DependentUpon>

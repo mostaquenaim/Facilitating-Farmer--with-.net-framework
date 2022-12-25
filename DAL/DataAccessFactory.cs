@@ -62,10 +62,19 @@ namespace DAL
             return new CustomerTokenRepo();
         }
 
-        public static IAuth AuthDataAccess()
+        public static ICustAuth CustomerAuthDataAccess()
         {
             return new CustomerRepo();
         }
+        public static IAdminAuth AdminAuthDataAccess()
+        {
+            return new AdminRepo();
+        }
+        public static ISpecAuth SpecialistAuthDataAccess()
+        {
+            return new SpecialistRepo();
+        }
+
 
     }
 }

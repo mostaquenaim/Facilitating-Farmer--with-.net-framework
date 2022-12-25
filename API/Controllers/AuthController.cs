@@ -10,14 +10,15 @@ using System.Web.Http;
 
 namespace server.Controllers
 {
+    [RoutePrefix("api")]
     public class AuthController : ApiController
     {
-        [Route("api/login")]
+        [Route("customerLogin")]
         [HttpGet]
 
-        public HttpResponseMessage Login(CustomerDTO user)
+        public HttpResponseMessage CustomerLogin(CustomerDTO user)
         {
-            var token = AuthService.Authenticate(user);
+            var token = CustomerAuthService.Authenticate(user);
             if (token != null)
             {
                 return Request.CreateResponse(HttpStatusCode.OK, token);
@@ -25,5 +26,37 @@ namespace server.Controllers
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "User not found");
         }
+
+        [Route("adminLogin")]
+        [HttpGet]
+
+        public HttpResponseMessage AdminLogin(AdminDTO admin)
+        {
+            var token = AdminAuthService.Authenticate(admin);
+
+            if (token != null)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, token);
+
+            }
+            return Request.CreateResponse(HttpStatusCode.NotFound, "User not found");
+        }
+
+        [Route("specialistLogin")]
+        [HttpGet]
+
+        public HttpResponseMessage SpecialistLogin(SpecialistDTO user)
+        {
+            var token = SpecialistAuthService.Authenticate(user);
+
+            if (token != null)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, token);
+
+            }
+            return Request.CreateResponse(HttpStatusCode.NotFound, "User not found");
+        }
+
+
     }
 }
