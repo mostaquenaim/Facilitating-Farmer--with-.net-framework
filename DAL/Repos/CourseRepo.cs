@@ -1,14 +1,16 @@
-﻿using DAL.EF.Models;
+﻿using DAL.EF;
+using DAL.EF.Models;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class CourseRepo : Repo, IRepo<Course>
+    internal class CourseRepo : Repo, IRepo<Course>, ICourseCategory
     {
         public Course Add(Course obj)
         {
@@ -27,6 +29,15 @@ namespace DAL.Repos
         public Course Get(int Id)
         {
             return db.Courses.Find(Id);
+        }
+
+        public List<Course> Getwithcatid(int Id)
+        {
+            var db = new FacilitatingFarmerContext();
+            var courses=(from row in db.Courses
+                where row.CategoryId == Id
+                select row).ToList();
+            return courses;
         }
 
         public Course Delete(int id)

@@ -168,6 +168,7 @@
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DifficultyController.cs" />
+    <Compile Include="Controllers\FileUploadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\SpecialistController.cs" />

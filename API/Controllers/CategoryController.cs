@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace server.Controllers
 {
-    [RoutePrefix("/api")]
+    [RoutePrefix("api")]
     public class CategoryController : ApiController
     {
         // Get all Catergory
@@ -31,7 +31,7 @@ namespace server.Controllers
 
         // Get difficulty by id
         [HttpGet]
-        [Route("difficulty/{id}")]
+        [Route("difficultycat/{id}")]
         public HttpResponseMessage GetDifficulty(int id)
         {
             try
@@ -46,6 +46,24 @@ namespace server.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
 
+        }
+
+        //Get a course by category id
+        [HttpGet]
+        
+        [Route("Category/{CategoryId}")]
+        public HttpResponseMessage Getwithcatid(int CategoryId)
+        {
+            try
+            {
+                var data = CategoryServices.Getwithcatid(CategoryId);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
         }
 
         // Add a course

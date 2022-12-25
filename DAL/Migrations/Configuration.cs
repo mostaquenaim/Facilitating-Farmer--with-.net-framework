@@ -41,7 +41,7 @@
             // ---------------------------------- Course Video Locks ------------------------------
 
 
-            bool[] locks = new bool[] { true, false };
+           bool[] locks = new bool[] { true, false };
 
             List<CouseVideoLock> couseVideoLocks = new List<CouseVideoLock>();
 

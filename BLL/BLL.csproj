@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,7 @@
     <Compile Include="DTOs\CustomerDTO.cs" />
     <Compile Include="DTOs\DifficultyCourseDTO.cs" />
     <Compile Include="DTOs\DifficultyDTO.cs" />
+    <Compile Include="DTOs\FileUploadingDTO.cs" />
     <Compile Include="DTOs\MessageAdminDTO.cs" />
     <Compile Include="DTOs\MessageCustomerDTO.cs" />
     <Compile Include="DTOs\QuestionDTO.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Services\CourseServices.cs" />
     <Compile Include="Services\CustomerServices.cs" />
     <Compile Include="Services\DifficultyServices.cs" />
+    <Compile Include="Services\FileUploading.cs" />
     <Compile Include="Services\QuestionServices.cs" />
     <Compile Include="Services\SpecialistServices.cs" />
   </ItemGroup>

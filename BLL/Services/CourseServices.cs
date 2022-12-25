@@ -46,6 +46,9 @@ namespace BLL.Services
 
         }
 
+        
+
+
         // add a course
         public static CourseSummaryDTO Add(CourseDTO dto)
         {

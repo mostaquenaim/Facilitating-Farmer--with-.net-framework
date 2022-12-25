@@ -41,6 +41,7 @@ namespace DAL.Repos
         {
             return db.Categories.Find(id);
         }
+        
 
         public Category Update(Category obj)
         {

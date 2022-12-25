@@ -26,3 +26,17 @@ E:\dotnet\Facilitating_Farmers\server\BLL\obj\Debug\BLL.csproj.CoreCompileInputs
 E:\dotnet\Facilitating_Farmers\server\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\dotnet\Facilitating_Farmers\server\BLL\obj\Debug\BLL.dll
 E:\dotnet\Facilitating_Farmers\server\BLL\obj\Debug\BLL.pdb
+E:\.net project\-net-project\BLL\bin\Debug\BLL.dll
+E:\.net project\-net-project\BLL\bin\Debug\BLL.pdb
+E:\.net project\-net-project\BLL\bin\Debug\AutoMapper.dll
+E:\.net project\-net-project\BLL\bin\Debug\DAL.dll
+E:\.net project\-net-project\BLL\bin\Debug\EntityFramework.dll
+E:\.net project\-net-project\BLL\bin\Debug\DAL.pdb
+E:\.net project\-net-project\BLL\bin\Debug\DAL.dll.config
+E:\.net project\-net-project\BLL\bin\Debug\AutoMapper.xml
+E:\.net project\-net-project\BLL\bin\Debug\EntityFramework.xml
+E:\.net project\-net-project\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\.net project\-net-project\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\.net project\-net-project\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\.net project\-net-project\BLL\obj\Debug\BLL.dll
+E:\.net project\-net-project\BLL\obj\Debug\BLL.pdb

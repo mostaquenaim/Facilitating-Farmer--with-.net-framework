@@ -15,7 +15,10 @@ namespace DAL
         {
             return new CourseRepo();
         }
-
+        public static ICourseCategory CourseCategoryDataAccess()
+        {
+            return new CourseRepo();
+        }
         public static IRepo<Difficulty> DifficultyDataAccess()
         {
             return new DifficultyRepo();

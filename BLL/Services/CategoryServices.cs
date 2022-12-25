@@ -44,6 +44,31 @@ namespace BLL.Services
             return mapper.Map<CategoryCourseDTO>(data);
         }
 
+        // Get course by CategoryId
+        public static List<CourseDTO> Getwithcatid(int CategoryId)
+        {
+            var data = DataAccessFactory.CourseCategoryDataAccess().Getwithcatid(CategoryId);
+
+
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Course, CourseDTO>();
+                cfg.CreateMap<Difficulty, DifficultyDTO>();
+                cfg.CreateMap<Category, CategoryDTO>();
+                cfg.CreateMap<CourseDTO, Course>();
+                
+                cfg.CreateMap<CategoryDTO, Category>();
+            });
+
+            var mapper = new Mapper(config);
+
+            return mapper.Map <List<CourseDTO>>(data);
+
+        } 
+
+        
+
+
+
         public static CategoryDTO Add(CategoryDTO dto)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<CategoryDTO, Difficulty>());
