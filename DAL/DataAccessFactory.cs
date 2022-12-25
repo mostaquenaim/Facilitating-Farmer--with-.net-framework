@@ -56,5 +56,16 @@ namespace DAL
         {
             return new AdminSendMessageRepo();
         }
+
+        public static IRepo<CustomerToken> CustomerTokensDataAccess()
+        {
+            return new CustomerTokenRepo();
+        }
+
+        public static IAuth AuthDataAccess()
+        {
+            return new CustomerRepo();
+        }
+
     }
 }

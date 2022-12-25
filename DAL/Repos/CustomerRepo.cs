@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class CustomerRepo : Repo, IRepo<Customer>
+    internal class CustomerRepo : Repo, IRepo<Customer>,IAuth
     {
         public Customer Add(Customer obj)
         {
@@ -52,6 +52,35 @@ namespace DAL.Repos
             if (db.SaveChanges() > 0) return obj;
 
             return null;
+        }
+
+        public CustomerToken Authenticate(Customer user)
+        {
+            
+            var u = db.Customers.FirstOrDefault(en=>en.Username.Equals(user.Username)&& en.Password.Equals(user.Password));
+            CustomerToken t = null; 
+            if (u != null) //authenticated
+            {
+                string token = Guid.NewGuid().ToString(); // unique random string generate
+                t = new CustomerToken();
+                t.CustomerId = u.Id;
+                t.TokenKey = token;
+                t.CreatedAt = DateTime.Now;
+                db.SaveChanges();
+
+            }
+            return t;
+
+        }
+
+        public bool IsAuthenticated(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Logout(string token)
+        {
+            throw new NotImplementedException();
         }
     }
 }

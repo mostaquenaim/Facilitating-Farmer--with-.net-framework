@@ -29,10 +29,12 @@ namespace DAL.EF.Models
         public string Password { get; set; }
 
         public List<AdminSendMessage> adminSendMessages { get; set; }
+        public List<AdminToken> AdminToken { get; set; }
 
         public Admin()
         {
             adminSendMessages = new List<AdminSendMessage>();
+            AdminToken = new List<AdminToken>();
         }
     }
 }

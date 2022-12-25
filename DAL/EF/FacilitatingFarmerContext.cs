@@ -39,5 +39,11 @@ namespace DAL.EF
 
         public DbSet <AdminSendMessage> AdminSendMessages { get; set; }
 
+        public DbSet<AdminToken> AdminTokens { get; set; }
+
+        public DbSet<CustomerToken> CustomerTokens { get; set; }
+
+        public DbSet<SpecialistToken> SpecialistTokens { get; set; }
+
     }
 }

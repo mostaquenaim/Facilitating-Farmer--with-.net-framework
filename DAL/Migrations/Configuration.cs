@@ -82,6 +82,7 @@
             context.Categories.AddOrUpdate(s => s.Type, categories1.ToArray());
 
 
+
             // ---------------------------------- Courses -----------------------------------
             
 
@@ -102,7 +103,28 @@
                 });
             }
 
-            context.Courses.AddOrUpdate(s => s.Title, courses.ToArray()); 
+            context.Courses.AddOrUpdate(s => s.Title, courses.ToArray());
+
+            // ---------------------------------- Customer -----------------------------------
+
+
+            /*   List<Customer> customers = new List<Customer>();
+               Random randcus = new Random();
+
+               for (int i = 1; i <= 10; i++)
+               {
+                   customers.Add(new Customer
+                   {
+                       // Guid substring max length 32 characters
+                       Name = Guid.NewGuid().ToString().Substring(0, 10),
+                       Username = Guid.NewGuid().ToString().Substring(1, 20),
+                       Email = Guid.NewGuid().ToString().Substring(1, 30),
+                       Password = Guid.NewGuid().ToString().Substring(1, 30);
+
+                   });
+               }
+
+               context.Courses.AddOrUpdate(s => s.Title, courses.ToArray()); */
         }
     }
 }

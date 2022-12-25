@@ -31,11 +31,13 @@ namespace DAL.EF.Models
 
         public List<CourseInstructorMap> CourseInstructorMaps { get; set; }
         public List<Answer> Answers { get; set; }
+        public List<SpecialistToken> SpecialistTokens { get; set; }
 
         public Specialist()
         {
             CourseInstructorMaps = new List<CourseInstructorMap>();
             Answers = new List<Answer>();
+            SpecialistTokens = new List<SpecialistToken>();
         }
     }
 }

@@ -31,12 +31,15 @@ namespace DAL.EF.Models
 
         public List<CourseEnrollment> courseEnrollments { get; set; }
         public List<Question> questions { get; set; }
+        public List<CustomerToken> CustomerTokens { get; set; }
 
         public Customer()
         {
             courseEnrollments = new List<CourseEnrollment>();
             questions = new List<Question>();
-            
+            CustomerTokens = new List<CustomerToken>();
+
+
         }
 
     }
