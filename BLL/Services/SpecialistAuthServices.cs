@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class SpecialistAuthService
+    public class SpecialistAuthServices
     {
-        static SpecialistAuthService()
+        static SpecialistAuthServices()
         {
             var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<SpecialistDTO, Specialist>();
@@ -42,6 +42,33 @@ namespace BLL.Services
             var result = DataAccessFactory.SpecialistAuthDataAccess().Authenticate(data);
             var token = mapper.Map<SpecialistTokenDTO>(result);
             return token;
+        }
+
+        public static bool Verified(SpecialistDTO user)
+        {
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<SpecialistDTO, Specialist>();
+                cfg.CreateMap<Specialist, SpecialistDTO>();
+                cfg.CreateMap<SpecialistTokenDTO, SpecialistToken>();
+                cfg.CreateMap<SpecialistToken, SpecialistTokenDTO>();
+            }
+            );
+
+            var mapper = new Mapper(config);
+
+
+
+            var data = mapper.Map<Specialist>(user);
+
+            var result = DataAccessFactory.SpecialistAuthDataAccess().Verfied(data);
+            
+            return result;
+        }
+
+        public static bool IsAuthenticated(string token)
+        {
+            var rs = DataAccessFactory.SpecialistAuthDataAccess().IsAuthenticated(token);
+            return rs;
         }
     }
 }

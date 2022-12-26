@@ -51,3 +51,4 @@ E:\New folder\-net-project\DAL\obj\Debug\DAL.dll
 E:\New folder\-net-project\DAL\obj\Debug\DAL.pdb
 E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.AddedNewDB.resources
 E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.newlyAddedDB.resources
+E:\New folder\-net-project\DAL\obj\Debug\DAL.Migrations.newAddedDB2.resources

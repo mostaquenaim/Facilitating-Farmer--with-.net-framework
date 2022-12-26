@@ -7,19 +7,22 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace server.Controllers
 {
+    [EnableCors("*", "*", "*")]
     [RoutePrefix("api")]
     public class AuthController : ApiController
     {
         [Route("customerLogin")]
-        [HttpGet]
+        [HttpPost]
 
         public HttpResponseMessage CustomerLogin(CustomerDTO user)
         {
-            var token = CustomerAuthService.Authenticate(user);
-            if (token != null)
+            var token = CustomerAuthServices.Authenticate(user);
+            
+            if (token != null )
             {
                 return Request.CreateResponse(HttpStatusCode.OK, token);
 
@@ -28,11 +31,11 @@ namespace server.Controllers
         }
 
         [Route("adminLogin")]
-        [HttpGet]
+        [HttpPost]
 
         public HttpResponseMessage AdminLogin(AdminDTO admin)
         {
-            var token = AdminAuthService.Authenticate(admin);
+            var token = AdminAuthServices.Authenticate(admin);
 
             if (token != null)
             {
@@ -43,18 +46,24 @@ namespace server.Controllers
         }
 
         [Route("specialistLogin")]
-        [HttpGet]
+        [HttpPost]
 
         public HttpResponseMessage SpecialistLogin(SpecialistDTO user)
         {
-            var token = SpecialistAuthService.Authenticate(user);
+            var token = SpecialistAuthServices.Authenticate(user);
+            var verified = SpecialistAuthServices.Verified(user);
 
-            if (token != null)
+           
+
+            if (token != null && verified)
             {
                 return Request.CreateResponse(HttpStatusCode.OK, token);
 
             }
+            else if(token == null)     
             return Request.CreateResponse(HttpStatusCode.NotFound, "User not found");
+
+            return Request.CreateResponse(HttpStatusCode.NotFound, "Not verified"); 
         }
 
 

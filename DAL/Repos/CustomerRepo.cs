@@ -75,7 +75,8 @@ namespace DAL.Repos
 
         public bool IsAuthenticated(string token)
         {
-            throw new NotImplementedException();
+           var rs = db.CustomerTokens.Any(t => t.TokenKey.Equals(token) && t.ExpiredAt==null);
+            return rs;
         }
 
         public void Logout(string token)

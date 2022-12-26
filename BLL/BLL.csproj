@@ -59,24 +59,25 @@
     <Compile Include="DTOs\CustomerTokenDTO.cs" />
     <Compile Include="DTOs\DifficultyCourseDTO.cs" />
     <Compile Include="DTOs\DifficultyDTO.cs" />
+    <Compile Include="DTOs\FileUploadingDTO.cs" />
     <Compile Include="DTOs\MessageAdminDTO.cs" />
     <Compile Include="DTOs\MessageCustomerDTO.cs" />
     <Compile Include="DTOs\QuestionDTO.cs" />
     <Compile Include="DTOs\SpecialistDTO.cs" />
     <Compile Include="DTOs\SpecialistTokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AdminAuthService.cs" />
+    <Compile Include="Services\AdminAuthServices.cs" />
     <Compile Include="Services\AdminSendMessageServices.cs" />
     <Compile Include="Services\AdminServices.cs" />
     <Compile Include="Services\AnswerServices.cs" />
-    <Compile Include="Services\CustomerAuthService.cs" />
+    <Compile Include="Services\CustomerAuthServices.cs" />
     <Compile Include="Services\CategoryServices.cs" />
     <Compile Include="Services\CourseEnrollmentServices.cs" />
     <Compile Include="Services\CourseServices.cs" />
     <Compile Include="Services\CustomerServices.cs" />
     <Compile Include="Services\DifficultyServices.cs" />
     <Compile Include="Services\QuestionServices.cs" />
-    <Compile Include="Services\SpecialistAuthService.cs" />
+    <Compile Include="Services\SpecialistAuthServices.cs" />
     <Compile Include="Services\SpecialistServices.cs" />
   </ItemGroup>
   <ItemGroup>

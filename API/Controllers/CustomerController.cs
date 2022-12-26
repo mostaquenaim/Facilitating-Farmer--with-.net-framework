@@ -6,11 +6,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using FinalProject.Authorization;
 
 namespace server.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class CustomerController : ApiController
     {
+        
         [HttpGet]
         [Route("api/customer/all")]
         public HttpResponseMessage Get()

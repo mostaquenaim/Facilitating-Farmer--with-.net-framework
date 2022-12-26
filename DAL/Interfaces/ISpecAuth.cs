@@ -12,5 +12,6 @@ namespace DAL.Interfaces
         SpecialistToken Authenticate(Specialist user);
         bool IsAuthenticated(string token);
         void Logout(string token);
+        bool Verfied(Specialist user);
     }
 }

@@ -382,3 +382,6 @@ E:\New folder\-net-project\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 E:\New folder\-net-project\API\obj\Debug\API.csproj.CopyComplete
 E:\New folder\-net-project\API\obj\Debug\server.dll
 E:\New folder\-net-project\API\obj\Debug\server.pdb
+E:\New folder\-net-project\API\bin\System.Web.Cors.dll
+E:\New folder\-net-project\API\bin\System.Web.Http.Cors.dll
+E:\New folder\-net-project\API\bin\System.Web.Http.Cors.xml

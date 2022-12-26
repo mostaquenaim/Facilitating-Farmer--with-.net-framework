@@ -29,6 +29,9 @@ namespace DAL.EF.Models
         [StringLength(100)]
         public string Password { get; set; }
 
+        [Required]
+        public int Verified { get; set; }
+
         public List<CourseInstructorMap> CourseInstructorMaps { get; set; }
         public List<Answer> Answers { get; set; }
         public List<SpecialistToken> SpecialistTokens { get; set; }

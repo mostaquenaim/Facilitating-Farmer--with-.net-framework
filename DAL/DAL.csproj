@@ -74,6 +74,8 @@
     <Compile Include="Interfaces\ICustAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\ISpecAuth.cs" />
+    <Compile Include="Interfaces\ITokenRepo.cs" />
+    <Compile Include="Interfaces\IWebHostEnvironmnet.cs" />
     <Compile Include="Migrations\202212101838401_AddedDB.cs" />
     <Compile Include="Migrations\202212101838401_AddedDB.designer.cs">
       <DependentUpon>202212101838401_AddedDB.cs</DependentUpon>
@@ -97,6 +99,10 @@
     <Compile Include="Migrations\202212250040243_newlyAddedDB.cs" />
     <Compile Include="Migrations\202212250040243_newlyAddedDB.designer.cs">
       <DependentUpon>202212250040243_newlyAddedDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212251646078_newAddedDB2.cs" />
+    <Compile Include="Migrations\202212251646078_newAddedDB2.designer.cs">
+      <DependentUpon>202212251646078_newAddedDB2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212250040243_newlyAddedDB.resx">
       <DependentUpon>202212250040243_newlyAddedDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212251646078_newAddedDB2.resx">
+      <DependentUpon>202212251646078_newAddedDB2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

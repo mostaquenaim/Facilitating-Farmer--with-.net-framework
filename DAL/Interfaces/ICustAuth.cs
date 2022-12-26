@@ -15,5 +15,6 @@ namespace DAL.Interfaces
         CustomerToken Authenticate(Customer user);
         bool IsAuthenticated(string token);
         void Logout(string token);
+        
     }
 }

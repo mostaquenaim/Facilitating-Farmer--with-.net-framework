@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class AdminAuthService
+    public class AdminAuthServices
     {
-        static AdminAuthService()
+        static AdminAuthServices()
         {
             var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<AdminDTO, Admin>();
@@ -42,6 +42,12 @@ namespace BLL.Services
             var result = DataAccessFactory.AdminAuthDataAccess().Authenticate(data);
             var token = mapper.Map<AdminTokenDTO>(result);
             return token;
+        }
+
+        public static bool IsAuthenticated(string token)
+        {
+            var rs = DataAccessFactory.AdminAuthDataAccess().IsAuthenticated(token);
+            return rs;
         }
     }
 }

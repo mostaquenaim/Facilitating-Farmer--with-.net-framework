@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class CustomerTokenRepo : Repo, IRepo<CustomerToken>
+    internal class CustomerTokenRepo : Repo, ITokenRepo<CustomerToken>
     {
         public CustomerToken Add(CustomerToken obj)
         {
@@ -41,6 +41,13 @@ namespace DAL.Repos
         {
             return db.CustomerTokens.Find(Id);
         }
+
+        public CustomerToken Get(string Id)
+        {
+            return db.CustomerTokens.FirstOrDefault(t => t.TokenKey.Equals(Id));
+        }
+
+        
 
         public CustomerToken Update(CustomerToken obj)
         {

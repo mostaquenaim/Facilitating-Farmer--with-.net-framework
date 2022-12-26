@@ -11,13 +11,9 @@ namespace BLL.DTOs
     {
         public int ID { get; set; }
 
-
         public int SpecialistId { get; set; }
-        public virtual Specialist Specialist { get; set; }
-
 
         public string TokenKey { get; set; }
-
 
         public System.DateTime CreatedAt { get; set; }
 

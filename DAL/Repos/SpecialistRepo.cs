@@ -60,7 +60,24 @@ namespace DAL.Repos
 
         public bool IsAuthenticated(string token)
         {
-            throw new NotImplementedException();
+            var rs = db.SpecialistTokens.Any(t => t.TokenKey.Equals(token) && t.ExpiredAt == null);
+            return rs;
+        }
+
+        public bool Verfied(Specialist user)
+        {
+
+            var username = user.Username;
+            var users = db.Specialists.FirstOrDefault(en => en.Username.Equals(username));
+
+            if(users == null) return false;
+
+            if (user.Password != users.Password || users.Verified != 1) return false;
+
+            return true;
+            
+            
+           
         }
 
         public void Logout(string token)

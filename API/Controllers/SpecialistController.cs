@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
+    [EnableCors("*", "*", "*")]
     [RoutePrefix("api/specialist")]
     public class SpecialistController : ApiController
     {
@@ -104,6 +106,13 @@ namespace API.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
+        }
+
+        [HttpPost]
+        [Route("specialistLogin")]
+        public HttpResponseMessage GetToken()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, new { TokenKey = "Henlo" });
         }
 
     }
