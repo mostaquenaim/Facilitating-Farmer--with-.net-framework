@@ -14,7 +14,7 @@ namespace server.Controllers
     [EnableCors("*", "*", "*")]
     public class CustomerController : ApiController
     {
-        
+        [ValidCus]
         [HttpGet]
         [Route("api/customer/all")]
         public HttpResponseMessage Get()
@@ -31,8 +31,10 @@ namespace server.Controllers
             }
         }
 
+
+        
         [HttpGet]
-        [Route("api/customer/all")]
+        [Route("api/customer/{ID}")]
         public HttpResponseMessage Get(int Id)
         {
             try

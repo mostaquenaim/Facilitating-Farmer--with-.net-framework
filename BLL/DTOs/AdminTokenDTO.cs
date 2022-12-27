@@ -13,7 +13,7 @@ namespace BLL.DTOs
 
 
         public int AdminId { get; set; }
-        public virtual Admin Admin { get; set; }
+       
 
 
         public string TokenKey { get; set; }

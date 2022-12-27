@@ -23,7 +23,7 @@ namespace DAL.EF.Models
 
         [Required]
         public System.DateTime CreatedAt { get; set; }
-        [Required]
+        
         public Nullable<System.DateTime> ExpiredAt { get; set; }
 
 

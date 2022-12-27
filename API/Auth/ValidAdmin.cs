@@ -19,6 +19,7 @@ namespace FinalProject.Authorization
             {
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "No authheader Supplied");
             }
+
             else
             {
                 var rs = AdminAuthServices.IsAuthenticated(authheader.ToString());

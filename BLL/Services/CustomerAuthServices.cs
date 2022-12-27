@@ -21,6 +21,22 @@ namespace BLL.Services
             var mapper = new Mapper(config);
         }
 
+        public static List<CustomerTokenDTO> Get()
+        {
+            var data = DataAccessFactory.CustomerTokensDataAccess().Get();
+
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<CustomerToken, CustomerTokenDTO>();
+                cfg.CreateMap<CustomerTokenDTO, CustomerToken>();
+               
+            });
+
+            var mapper = new Mapper(config);
+
+            return mapper.Map<List<CustomerTokenDTO>>(data);
+
+        }
+
         public static CustomerTokenDTO Authenticate(CustomerDTO user)
         {
             

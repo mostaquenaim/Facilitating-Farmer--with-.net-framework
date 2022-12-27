@@ -66,6 +66,22 @@ namespace server.Controllers
             return Request.CreateResponse(HttpStatusCode.NotFound, "Not verified"); 
         }
 
+        [HttpGet]
+        [Route("allCustomer")]
+        public HttpResponseMessage GetAllTokens()
+        {
+            try
+            {
+                var data = CustomerAuthServices.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+
 
     }
 }

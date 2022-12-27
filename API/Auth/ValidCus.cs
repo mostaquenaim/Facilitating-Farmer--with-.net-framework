@@ -15,10 +15,12 @@ namespace FinalProject.Authorization
         public override void OnAuthorization(HttpActionContext actionContext)
         {
             var authheader = actionContext.Request.Headers.Authorization;
+
             if (authheader == null)
             {
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "No authheader Supplied");
             }
+
             else
             {
                 var rs = CustomerAuthServices.IsAuthenticated(authheader.ToString());
